@@ -21,4 +21,9 @@ Route::get('/home', 'HomeController@index');
 Route::get('/pay-school', 'PageController@pay');
 Route::get('/features', 'PageController@feature');
 Route::get('/about-upg', 'PageController@about');
-
+Route::get('/home', 'PageController@home');
+Route::get('/account', 'PageController@account');
+Route::get('/paymethods', 'PageController@paymethods');
+Route::get('/ontransactions', 'PageController@ontransactions');
+Route::get('/pasttransactions', 'PageController@pasttransactions');
+Route::get('/admin', 'PageController@admin');
