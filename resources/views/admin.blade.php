@@ -49,6 +49,7 @@
             </div>
         </div>
 
+
         <table class="table table-striped projects">
             <thead>
             <tr>
@@ -71,7 +72,7 @@
                 <td>
                     <ul class="list-inline">
                         <li>
-                            <img src="assets/img/user.png" class="avatar" alt="Avatar">
+                            <img src="img/user.png" class="avatar" alt="Avatar">
                         </li>
                     </ul>
                 </td>
@@ -100,7 +101,7 @@
                 <td>
                     <ul class="list-inline">
                         <li>
-                            <img src="assets/img/user7.png" class="avatar" alt="Avatar">
+                            <img src="img/user7.png" class="avatar" alt="Avatar">
                         </li>
                     </ul>
                 </td>
@@ -129,7 +130,7 @@
                 <td>
                     <ul class="list-inline">
                         <li>
-                            <img src="assets/img/user2.png" class="avatar" alt="Avatar">
+                            <img src="img/user2.png" class="avatar" alt="Avatar">
                         </li>
                     </ul>
                 </td>
@@ -158,7 +159,7 @@
                 <td>
                     <ul class="list-inline">
                         <li>
-                            <img src="assets/img/user3.png" class="avatar" alt="Avatar">
+                            <img src="img/user3.png" class="avatar" alt="Avatar">
                         </li>
                     </ul>
                 </td>
@@ -187,7 +188,7 @@
                 <td>
                     <ul class="list-inline">
                         <li>
-                            <img src="assets/img/user4.png" class="avatar" alt="Avatar">
+                            <img src="img/user4.png" class="avatar" alt="Avatar">
                         </li>
                     </ul>
                 </td>
@@ -216,7 +217,7 @@
                 <td>
                     <ul class="list-inline">
                         <li>
-                            <img src="assets/img/user6.png" class="avatar" alt="Avatar">
+                            <img src="img/user6.png" class="avatar" alt="Avatar">
                         </li>
                     </ul>
                 </td>
@@ -245,7 +246,7 @@
                 <td>
                     <ul class="list-inline">
                         <li>
-                            <img src="assets/img/user5.png" class="avatar" alt="Avatar">
+                            <img src="img/user5.png" class="avatar" alt="Avatar">
                         </li>
                     </ul>
                 </td>
@@ -274,7 +275,7 @@
                 <td>
                     <ul class="list-inline">
                         <li>
-                            <img src="assets/img/user7.png" class="avatar" alt="Avatar">
+                            <img src="img/user7.png" class="avatar" alt="Avatar">
                         </li>
                     </ul>
                 </td>
@@ -303,7 +304,7 @@
                 <td>
                     <ul class="list-inline">
                         <li>
-                            <img src="assets/img/user8.png" class="avatar" alt="Avatar">
+                            <img src="img/user8.png" class="avatar" alt="Avatar">
                         </li>
                     </ul>
                 </td>
@@ -323,6 +324,7 @@
                 </td>
             </tr>
             </tbody>
+
         </table>
         <!-- end project list -->
 

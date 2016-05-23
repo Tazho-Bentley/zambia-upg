@@ -83,6 +83,9 @@
 
                         </div>
                     </div>
+
+                <div class="panel-body">
+
                 </div>
             </div>
             <!-- /. ROW  -->
@@ -202,7 +205,7 @@
                             <ul class="chat-box">
                                 <li class="left clearfix">
                                     <span class="chat-img pull-left">
-                                        <img src="assets/img/1.png" alt="User" class="img-circle" />
+                                        <img src="img/1.png" alt="User" class="img-circle" />
                                     </span>
                                     <div class="chat-body">
                                         <strong >Client</strong>
@@ -210,14 +213,14 @@
                                             <i class="fa fa-clock-o fa-fw"></i>12 mins ago
                                         </small>
                                         <p>
-                                            Hey love, did you get my email. I think I won't make it today. My flight was cancelled. Tell Mr. Musenge for me, his line is off.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
                                         </p>
                                     </div>
                                 </li>
                                 <li class="right clearfix">
                                     <span class="chat-img pull-right">
 
-                                        <img src="assets/img/2.png" alt="User" class="img-circle" />
+                                        <img src="img/2.png" alt="User" class="img-circle" />
                                     </span>
                                     <div class="chat-body clearfix">
 
@@ -226,13 +229,13 @@
                                         <strong class="pull-right">Admin</strong>
 
                                         <p>
-                                            Oh yes, honey, I did. By the way, Mr. Pearson says he is having problems receiving his online payments. You remember he recently changed his bank account.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
                                         </p>
                                     </div>
                                 </li>
                                 <li class="left clearfix">
                                     <span class="chat-img pull-left">
-                                         <img src="assets/img/3.png" alt="User" class="img-circle" />
+                                         <img src="img/1.png" alt="User" class="img-circle" />
                                     </span>
                                     <div class="chat-body clearfix">
 
@@ -241,7 +244,7 @@
                                             <i class="fa fa-clock-o fa-fw"></i>14 mins ago</small>
 
                                         <p>
-                                            Lol, dude, what will happen now. I told you am giving a talk on Agora Innovatus at the US embassy today. You know I can't miss.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
                                         </p>
                                     </div>
                                 </li>
