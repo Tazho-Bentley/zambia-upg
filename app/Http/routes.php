@@ -26,4 +26,7 @@ Route::get('/account', 'PageController@account');
 Route::get('/paymethods', 'PageController@paymethods');
 Route::get('/ontransactions', 'PageController@ontransactions');
 Route::get('/pasttransactions', 'PageController@pasttransactions');
-Route::get('/admin', 'PageController@admin');
+Route::get('/dashboard', 'adminController@dashboard');
+Route::get('/clientarea', 'adminController@client');
+Route::get('/completedtrans', 'adminController@completed');
+Route::get('/ongoingtrans', 'adminController@ongoing');
