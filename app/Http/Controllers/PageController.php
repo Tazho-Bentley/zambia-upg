@@ -48,9 +48,4 @@ class PageController extends Controller
     {
         return view('pasttransactions');
     }
-
-    public function admin()
-    {
-        return view('admin');
-    }
 }

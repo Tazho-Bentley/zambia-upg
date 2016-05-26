@@ -89,7 +89,13 @@
                             <li><a href="{{ url('/features') }}">Features</a></li>
                             <li><a href="{{ url('/pay-school') }}">Pay School</a></li>
                             <li><a href="{{ url('/about-upg') }}">About UPG</a></li>
-                            <li><a href="{{ url('/home') }}">My Account</a></li>
+                            <!-- Secure the Admin area -->
+                            @if (Auth::guest())
+                                <li><a href="{{ url('/login') }}"><i class="fa fa-user"></i>My Account</a></li>
+                            @else
+                                <li><a href="{{ url('/admin') }}"><i class="fa fa-user"></i>My Account</a></li>
+                            @endif
+
                         </ul>
                     </div>
                 </div>

@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    @extends('layouts.app')
-
-@section('content')
     <div class="container">
+<<<<<<< HEAD
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
@@ -327,8 +325,10 @@
 
         </table>
         <!-- end project list -->
+=======
+        @include('includes.administrator')
+>>>>>>> 0793541e0f67f84f31c2231da61a31ddee2bc4b9
 
     </div>
-
 
 @endsection
