@@ -17,7 +17,7 @@
                         <a class="active-menu"  href="home"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a  href="paymethods"><i class="fa fa-desktop fa-3x"></i> Payment Methods </a>
+                        <a  href="paymethods"><i class="fa fa-desktop fa-3x"></i> Merchant Information </a>
                     </li>
 
                     <li  >
