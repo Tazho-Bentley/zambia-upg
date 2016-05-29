@@ -93,7 +93,7 @@
                             @if (Auth::guest())
                                 <li><a href="{{ url('/login') }}"><i class="fa fa-user"></i>My Account</a></li>
                             @else
-                                <li><a href="{{ url('/admin') }}"><i class="fa fa-user"></i>My Account</a></li>
+                                <li><a href="{{ url('/home') }}"><i class="fa fa-user"></i>My Account</a></li>
                             @endif
 
                         </ul>
