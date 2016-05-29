@@ -12,11 +12,7 @@
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-                    <li class="text-center">
-
-                    </li>
-
-
+                    <li class="text-center"></li>
                     <li>
                         <a class="active-menu"  href="home"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>

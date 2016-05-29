@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Auth;
 class adminController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
     public function getLogin(){
         return view('admin.login');
     }
@@ -18,15 +22,13 @@ class adminController extends Controller
             'username'=> 'required',
             'password'=>'required'
         ]);
-        return view('admin.validate');
-        /*if(!Auth::attempt([
+        if(!Auth::attempt([
             'username'=>$request['username'],
             'password'=>$request['password']
         ])){
             return redirect()->back()->with(['fail'=>'Login Failed']);
-        }*/
-       // return redirect()->route('admin.dashboard');
-        //return view('admin.admindashboard');
+        }
+        return redirect()->route('admin.dashboard');
 
     }
     public function dashboard()
