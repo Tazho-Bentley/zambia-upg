@@ -24,35 +24,6 @@
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('company_address') ? ' has-error' : '' }}">
-                                <label class="col-md-4 control-label">Company Address</label>
-
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" name="company_address" value="{{ old('company_address') }}">
-
-                                    @if ($errors->has('company_address'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('company_address') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
-                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label class="col-md-4 control-label">Company Name</label>
-
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" name="company_name" value="{{ old('company_name') }}">
-
-                                    @if ($errors->has('company_name'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('company_name') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
-
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label class="col-md-4 control-label">E-Mail Address</label>
 
