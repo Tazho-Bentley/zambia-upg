@@ -43,7 +43,7 @@
                                         <li><a href="{{ url('/register') }}"><i class="fa fa-user"></i>Register</a></li>
                                     @else
                                         <li class="dropdown">
-                                            <a href="#" class="dropdown" data-toggle="dropdown" role="button" aria-expanded="true">
+                                            <a href="#" class="dropdown" data-toggle="dropdown" role="button" aria-expanded="false">
                                                 {{ Auth::user()->name }} <span class="caret"></span>
                                             </a>
 
@@ -93,7 +93,7 @@
                             @if (Auth::guest())
                                 <li><a href="{{ url('/login') }}"><i class="fa fa-user"></i>My Account</a></li>
                             @else
-                                <li><a href="{{ url('/dashboard') }}"><i class="fa fa-user"></i>My Account</a></li>
+                                <li><a href="{{ url('/home') }}"><i class="fa fa-user"></i>My Account</a></li>
                             @endif
 
                         </ul>
