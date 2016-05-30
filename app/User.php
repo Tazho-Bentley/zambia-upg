@@ -28,6 +28,6 @@ class User extends Authenticatable
     * Return if user is superuser privileges
     */
     public function is_admin() {
-        return $this->role == 1;
+        return $this->role === 1;
     }
 }

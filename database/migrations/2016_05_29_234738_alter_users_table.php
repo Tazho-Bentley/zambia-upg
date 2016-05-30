@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnToUsersTable extends Migration
+class AlterUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class AddColumnToUsersTable extends Migration
      */
     public function up()
     {
-        //
+        //Email as a primary key
         Schema::table('users',function($table){
             $table->string('email')->primary()->unsigned()->change();
         });

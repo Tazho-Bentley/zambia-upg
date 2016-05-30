@@ -13,24 +13,7 @@ class adminController extends Controller
     {
         $this->middleware('admin');
     }
-    public function getLogin(){
-        return view('admin.login');
-    }
-    //public function postLogin(){
-    public function postLogin(Request $request){
-        $this->validate($request, [
-            'username'=> 'required',
-            'password'=>'required'
-        ]);
-        if(!Auth::attempt([
-            'username'=>$request['username'],
-            'password'=>$request['password']
-        ])){
-            return redirect()->back()->with(['fail'=>'Login Failed']);
-        }
-        return redirect()->route('admin.dashboard');
 
-    }
     public function dashboard()
     {
         return view('admin.admindashboard');
@@ -46,5 +29,9 @@ class adminController extends Controller
     public function completed()
     {
         return view('admin.completedtrans');
+    }
+    public function account()
+    {
+        return view('admin.adminaccount');
     }
 }

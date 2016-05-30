@@ -9,7 +9,7 @@ use App\Http\Requests;
 class ClientController extends Controller
 {
     //All client functions will be done here
-    public function home()
+    public function dashboard()
     {
         return view('client.clientdashboard');
     }

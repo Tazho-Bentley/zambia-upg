@@ -7,7 +7,7 @@
                 <a class="active-menu"  href="dashboard"><i class="fa fa-dashboard fa-3x"></i>Dashboard</a>
             </li>
             <li>
-                <a  href="clientinfo"><i class="fa fa-desktop fa-3x"></i>Client Area</a>
+                <a  href="clientarea"><i class="fa fa-desktop fa-3x"></i>Client Area</a>
             </li>
             <li  >
                 <a  href="ongoingtrans"><i class="fa fa-table fa-3x"></i>Ongoing Transactions</a>
