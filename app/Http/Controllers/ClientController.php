@@ -8,6 +8,10 @@ use App\Http\Requests;
 
 class ClientController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('client');
+    }
     //All client functions will be done here
     public function dashboard()
     {

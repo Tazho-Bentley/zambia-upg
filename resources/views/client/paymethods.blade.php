@@ -27,21 +27,21 @@
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="name">Company Name</label>
                                     <div class="col-sm-7">
-                                        <input type="name" class="form-control" id="name" placeholder="Enter company name">
+                                        <input type="text" name="c_name" id="name" placeholder="Enter company name">
                                     </div><br>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="number">Telephone Number</label>
                                     <div class="col-sm-7">
-                                        <input type="contact" class="form-control" id="contact" placeholder="Enter company contact number">
+                                        <input type="number" name="c_number" id="contact" placeholder="Enter company contact number">
                                     </div>
                                 </div><br>
 
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="address">Company Address</label>
                                     <div class="col-sm-7">
-                                        <input type="address" class="form-control" id="address" placeholder="Enter company address">
+                                        <input type="text" name="c_address" id="address" placeholder="Enter company address">
                                     </div>
                                 </div><br>
 
@@ -99,6 +99,5 @@
                 </div>
             </div>
         </div>
-
-
+    </div>
 @endsection

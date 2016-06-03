@@ -17,8 +17,8 @@ class CreateCompanyInformationsTable extends Migration
             $table->string('c_name');
             $table->integer('c_telephone');
             $table->string('c_address');
-            $table->string('email')->unsigned();
-            $table->foreign('email')->references('email')->on('users');
+            $table->integer('userID')->unsigned();
+            $table->foreign('userID')->references('id')->on('users');
             $table->rememberToken();
             $table->timestamps();
         });

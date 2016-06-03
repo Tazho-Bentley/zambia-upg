@@ -23,12 +23,15 @@ Route::group(['middleware'=>['web']], function()
     Route::get('/pay-school', 'PageController@pay');
     Route::get('/features', 'PageController@feature');
     Route::get('/about-upg', 'PageController@about');
-    Route::get('/home', 'ClientController@dashboard');
-    Route::get('/account', 'ClientController@account');
-    Route::get('/dashboard', 'ClientController@dashboard');
-    Route::get('/paymethods', 'ClientController@paymethods');
-    Route::get('/ontransactions', 'ClientController@ontransactions');
-    Route::get('/pasttransactions', 'ClientController@pasttransactions');
+
+    Route::group(['middleware' => 'App\Http\Middleware\ClientMiddleware'], function(){
+        Route::get('/account', 'ClientController@account');
+        Route::get('/vendor-area', 'ClientController@dashboard');
+        Route::get('/paymethods', 'ClientController@paymethods');
+        Route::get('/ontransactions', 'ClientController@ontransactions');
+        Route::get('/pasttransactions', 'ClientController@pasttransactions');
+        ROute::post('company-info-save','CompanyInfoController@storeCompanyInfo');
+    });
 
     Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
     {
