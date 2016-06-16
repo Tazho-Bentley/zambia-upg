@@ -30,7 +30,7 @@ Route::group(['middleware'=>['web']], function()
         Route::get('/paymethods', 'ClientController@paymethods');
         Route::get('/ontransactions', 'ClientController@ontransactions');
         Route::get('/pasttransactions', 'ClientController@pasttransactions');
-        ROute::post('company-info-save','CompanyInfoController@storeCompanyInfo');
+        Route::post('company-info-save','CompanyInfoController@storeCompanyInfo');
     });
 
     Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()

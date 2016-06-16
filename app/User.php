@@ -27,6 +27,12 @@ class User extends Authenticatable
     **
     * Return if user is superuser privileges
     */
+
+
+    public function company_information(){
+        return $this->hasOne('App\CompanyInformation', 'userID');
+    }
+
     public function is_admin() {
         return $this->role === 1;
     }

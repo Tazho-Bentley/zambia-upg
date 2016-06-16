@@ -15,79 +15,53 @@
         <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
-                    <div class="col-md-12">
-                        <h2>Company Information</h2>
-                        <h5>Change your company details here. </h5>
-                    </div>
-                </div><hr/>
-                <div class="row panel">
-                    <div class="col-lg-6 panel-body">
-                        <div>
-                            <form class="form-horizontal" role="form">
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="name">Company Name</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" name="c_name" id="name" placeholder="Enter company name">
-                                    </div><br>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="number">Telephone Number</label>
-                                    <div class="col-sm-7">
-                                        <input type="number" name="c_number" id="contact" placeholder="Enter company contact number">
-                                    </div>
-                                </div><br>
-
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="address">Company Address</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" name="c_address" id="address" placeholder="Enter company address">
-                                    </div>
-                                </div><br>
-
-                                <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-10">
-                                        <button type="submit" class="btn btn-default">Submit</button>
-                                    </div>
-                                </div><hr/>
-                            </form>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>Company Information</h2>
+                                <h5>Change your company details here. </h5>
+                            </div>
+                        </div><hr/>
+                        <div class="row panel">
+                            <div class="col-lg-12 panel-body">
+                                <h4><span class="label label-success">Company Name:</span> {{$c_name}}</h4>
+                                <h4><span class="label label-success">Company Email:</span> {{$email}}</h4>
+                                <h4><span class="label label-success">Company Telephone:</span> {{$c_telephone}}</h4>
+                                <h4><span class="label label-success">Company Address:</span> {{$c_address}}</h4>
+                            </div>
+                            <button type="button" class="btn btn-default btn-primary btn-sm" data-toggle="modal" data-target="#companyinfo">
+                                Edit
+                            </button>
                         </div>
                     </div>
-                    <div class="col-lg-6 panel-body">
-                        <label>Company Name</label><br>
-                        <label>Company Email</label><br>
-                        <label>Company Telephone</label><br>
-                        <label>Company Address</label><br>
-                        <label>Name</label><br>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Payment Methods</h2>
+                            <h5>Select pay methods your business uses</h5>
+                        </div>
+                        <div><hr/>
+                            <div class="row panel">
+                                <div class="panel-body col-lg-12">
+                                    <form action="#" method="get">
+                                        <input type="checkbox" name="payment" value="method"> MTN Mobile Money<br><br>
+                                        <input type="checkbox" name="payment" value="method"> Airtel Money<br><br>
+                                        <input type="checkbox" name="payment" value="method"> XAPIT(ZANACO)<br><br>
+                                        <input type="checkbox" name="payment" value="method"> Debit / Credit Card<br><br>
+                                        <input type="checkbox" name="payment" value="method" checked="checked"> ZOONA<br><br>
+                                        <input type="submit" value="Add">
+                                        <input type="submit" value="Remove">
+                                    </form>
+                                </div>
+                            </div>
+                        </div><hr/>
                     </div>
                 </div>
-
-
-
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2>Payment Methods</h2>
-                        <h5>Select pay methods your business uses</h5>
-                    </div>
-                </div><hr/>
-
-                <div>
-                    <form action="demo_form.asp" method="get">
-                        <input type="checkbox" name="payment" value="method"> MTN Mobile Money<br><br>
-                        <input type="checkbox" name="payment" value="method"> Airtel Money<br><br>
-                        <input type="checkbox" name="payment" value="method"> XAPIT(ZANACO)<br><br>
-                        <input type="checkbox" name="payment" value="method"> Debit / Credit Card<br><br>
-                        <input type="checkbox" name="payment" value="method" checked="checked"> ZOONA<br><br>
-                        <input type="submit" value="Add">
-                        <input type="submit" value="Remove">
-                    </form>
-                </div><hr/>
-
                 <div class="row">
                     <div class="col-md-12">
                         <h2>Deactivate Account</h2>
-                        <form action="demo_form.asp" method="get">
+                        <form action="#" method="get">
                             <input type="checkbox" name="payment" value="method"> Are you sure you want to deactivate your account<br><br>
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
@@ -100,4 +74,68 @@
             </div>
         </div>
     </div>
+
+    <!-- My Modals for this page!-->
+    <!-- Modal -->
+    <div class="modal fade" id="paymentinfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Available Payment Information</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <fieldset class="form-group">
+                            <input type="checkbox" name="payment" value="method"> MTN Mobile Money<br><br>
+                            <input type="checkbox" name="payment" value="method"> Airtel Money<br><br>
+                            <input type="checkbox" name="payment" value="method"> XAPIT(ZANACO)<br><br>
+                            <input type="checkbox" name="payment" value="method"> Debit / Credit Card<br><br>
+                            <input type="checkbox" name="payment" value="method" checked="checked"> ZOONA<br><br>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="companyinfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Edit Company Information</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form" method="post" action="{{url('/company-info-save')}}">
+                        <fieldset class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Name</span>
+                                <input type="text" id="company_name" name="company_name" class="form-control" placeholder="{{$c_name}}" aria-describedby="sizing-addon1">
+                            </div><hr/>
+                            <div class="input-group">
+                                <span class="input-group-addon">Address</span>
+                                <input type="text" name="company_address" class="form-control" id="company_address" placeholder="{{$c_address}}" aria-describedby="sizing-addon1">
+                            </div><hr/>
+                            <div class="input-group">
+                                <span class="input-group-addon">Phone Number</span>
+                                <input type="text" name="company_telephone" class="form-control" id="company_telephone" placeholder="{{$c_telephone}}" aria-describedby="sizing-addon1">
+                            </div>
+                        </fieldset>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <input type="hidden" value="{{\Illuminate\Support\Facades\Session::token()}}" name="_token">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 @endsection
