@@ -12,6 +12,12 @@ class CompanyInformationSeeder extends Seeder
      */
     public function run()
     {
-        //
+
+        $info = new CompanyInformation();
+        $info->c_name="General Bust Assoc";
+        $info->c_address="20202021 Lusaka";
+        $info->c_telephone=974405182;
+        $info->userID= 1;
+        $info->save();
     }
 }

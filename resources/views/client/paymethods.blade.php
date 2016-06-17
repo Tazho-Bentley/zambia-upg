@@ -35,6 +35,11 @@
                         </div>
                     </div>
                 </div>
+                @if(Session::has('flash_message'))
+                    <div class="alert alert-success">
+                        {{ Session::get('flash_message') }}
+                    </div>
+                @endif
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12">
@@ -115,15 +120,15 @@
                         <fieldset class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon">Name</span>
-                                <input type="text" id="company_name" name="company_name" class="form-control" placeholder="{{$c_name}}" aria-describedby="sizing-addon1">
+                                <input type="text" required id="company_name" name="company_name" class="form-control" placeholder="{{$c_name}}" aria-describedby="sizing-addon1">
                             </div><hr/>
                             <div class="input-group">
                                 <span class="input-group-addon">Address</span>
-                                <input type="text" name="company_address" class="form-control" id="company_address" placeholder="{{$c_address}}" aria-describedby="sizing-addon1">
+                                <input type="text" required name="company_address" class="form-control" id="company_address" placeholder="{{$c_address}}" aria-describedby="sizing-addon1">
                             </div><hr/>
                             <div class="input-group">
                                 <span class="input-group-addon">Phone Number</span>
-                                <input type="text" name="company_telephone" class="form-control" id="company_telephone" placeholder="{{$c_telephone}}" aria-describedby="sizing-addon1">
+                                <input type="text" required name="company_telephone" class="form-control" id="company_telephone" placeholder="{{$c_telephone}}" aria-describedby="sizing-addon1">
                             </div>
                         </fieldset>
                         <div class="modal-footer">

@@ -18,4 +18,8 @@ class CompanyInformation extends Model
     public function user(){
         return $this->belongsTo('App\User','userID');
     }
+    public function methods()
+    {
+        return $this->hasMany('App\PaymentMethod');
+    }
 }

@@ -13,22 +13,42 @@ class CompanyInfoController extends Controller
 {
     //
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function storeCompanyInfo(Request $request)
     {
         // Validate and store the company information
-       /* $this->validate($request,[
+        /*$this->validate($request,[
             'company_name' => 'required|alpha',
             'company_address'=>'required|alpha_num',
             'company_telephone'=>'required|alpha_num'
         ]);*/
 
         $id = Auth::User()->id;
+        $exists = DB::table('company_informations')->where('userID', $id)->first();
 
-        DB::table('company_informations')
-            ->where('userID', $id)->update([
-                'c_name' => $request['company_name']
+        if(!$exists){
+            // not there
+            $res = DB::table('company_informations')->insert([
+                ['c_name' => $request->company_name, 'c_address' => $request->company_address,
+                    'c_telephone' => $request->company_telephone,'userID' => $id]
             ]);
 
-        return redirect()->back();
+            if($res)
+                $request->session()->flash('flash_message', 'Company Information Added!');
+            return redirect()->back();
+        }
+        else{
+            $res = DB::table('company_informations')->where('userId', $id)
+                    ->update([
+                        'c_name' => $request->company_name, 'c_address' => $request->company_address,
+                        'c_telephone' => $request->company_telephone]
+                    );
+            if($res)
+                $request->session()->flash('flash_message', 'Company Information Updated!');
+            return redirect()->back();
+        }
     }
 }

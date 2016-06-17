@@ -14,6 +14,10 @@ class ChangeUserIDColumnInCompanyInformationsTable extends Migration
     public function up()
     {
         //
+        Schema::table('company_informations', function ($table) {
+            $table->integer('userID')->unsigned()->unique()->change();
+        });
+
     }
 
     /**
