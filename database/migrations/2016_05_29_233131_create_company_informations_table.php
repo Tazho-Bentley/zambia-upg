@@ -17,7 +17,12 @@ class CreateCompanyInformationsTable extends Migration
             $table->string('c_name');
             $table->integer('c_telephone');
             $table->string('c_address');
-            $table->integer('userID')->unsigned();
+            $table->boolean('mtn');
+            $table->boolean('cardservices');
+            $table->boolean('airtel');
+            $table->boolean('zoona');
+            $table->boolean('xapit');
+            $table->integer('userID')->unsigned()->unique();
             $table->foreign('userID')->references('id')->on('users');
             $table->rememberToken();
             $table->timestamps();

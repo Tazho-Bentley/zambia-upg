@@ -45,19 +45,20 @@
                         <div class="col-md-12">
                             <h2>Payment Methods</h2>
                             <h5>Select pay methods your business uses</h5>
+                            @if(empty($payment_opt))
+                                <h5>No payment options registered</h5>
+                            @else
+                                <ul>
+                                    @foreach($payment_opt as $opt)
+                                        {!! $opt !!}<br>
+                                    @endforeach
+                                </ul>
+                            @endif
                         </div>
                         <div><hr/>
                             <div class="row panel">
                                 <div class="panel-body col-lg-12">
-                                    <form action="#" method="get">
-                                        <input type="checkbox" name="payment" value="method"> MTN Mobile Money<br><br>
-                                        <input type="checkbox" name="payment" value="method"> Airtel Money<br><br>
-                                        <input type="checkbox" name="payment" value="method"> XAPIT(ZANACO)<br><br>
-                                        <input type="checkbox" name="payment" value="method"> Debit / Credit Card<br><br>
-                                        <input type="checkbox" name="payment" value="method" checked="checked"> ZOONA<br><br>
-                                        <input type="submit" value="Add">
-                                        <input type="submit" value="Remove">
-                                    </form>
+                                    <button type="button" class="btn btn-default btn-primary btn-sm" data-toggle="modal" data-target="#paymentinfo">Add/Remove</button>
                                 </div>
                             </div>
                         </div><hr/>
@@ -81,29 +82,29 @@
     </div>
 
     <!-- My Modals for this page!-->
-    <!-- Modal -->
+    <!-- This is what happens when you dont read comments. chita and shemiah 2016 -->
     <div class="modal fade" id="paymentinfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Available Payment Information</h4>
+                    <h4 class="modal-title" id="myModalLabel">Edit Payment Methods</h4>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form role="form" method="post" action="{{url('/payment')}}">
                         <fieldset class="form-group">
-                            <input type="checkbox" name="payment" value="method"> MTN Mobile Money<br><br>
-                            <input type="checkbox" name="payment" value="method"> Airtel Money<br><br>
-                            <input type="checkbox" name="payment" value="method"> XAPIT(ZANACO)<br><br>
-                            <input type="checkbox" name="payment" value="method"> Debit / Credit Card<br><br>
-                            <input type="checkbox" name="payment" value="method" checked="checked"> ZOONA<br><br>
+                            @foreach($payment_opt_all as $opt)
+                                {!! $opt !!}<br><br>
+                            @endforeach
                         </fieldset>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <input type="hidden" value="{{\Illuminate\Support\Facades\Session::token()}}" name="_token">
+                        </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+
             </div>
         </div>
     </div>
