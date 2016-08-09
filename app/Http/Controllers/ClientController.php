@@ -63,7 +63,7 @@ class ClientController extends Controller
             if($payment_method == 'mtn')
             {
                 if($value == 1)
-                    $payment_opt_all[]= '<input type="checkbox" name="mtn" value=1 checked> MTN Mobile Money';
+                    $payment_opt_all[]= '<input id="mtn" type="checkbox" name="mtn" value=1 checked> MTN Mobile Money';
                 else
                     $payment_opt_all[]= '<input type="checkbox" name="mtn" value=1> MTN Mobile Money';
             }

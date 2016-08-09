@@ -23,17 +23,18 @@ class EditPaymentMethod extends Controller
         // Validate the request...
         $data = $request->all();
         $id = \Illuminate\Support\Facades\Auth::User()->id;
-        $companyID = DB::table('company_informations')->where('userID', $id)->value('merchantID');
+        $companyID = DB::table('company_informations')->where('userID', $id)->value('id');
         $company_info = CompanyInformation::findorfail($companyID);
-        $company_info->update($request->all());
-        ([
+        $request = array_except($request, ['_token']);
+        $company_info->where('id', $companyID)->update($request->all());
+        //$company_info->where('id', $companyID)->update($request->except(['_token']));
+        /*([
             'mtn'=> $data['mtn'],
             'airtel'=>$data['airtel'],
             'cardservices'=>$data['cardservices'],
             'zoona'=>$data['zoona'],
             'xapit'=>$data['xapit']
-        ]);
-        redirect('paymethods');
-        echo 'here';
+        ]);*/
+        return redirect()->back();
     }
 }

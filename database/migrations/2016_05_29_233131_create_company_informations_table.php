@@ -13,7 +13,7 @@ class CreateCompanyInformationsTable extends Migration
     public function up()
     {
         Schema::create('company_informations', function (Blueprint $table) {
-            $table->increments('merchantID');
+            $table->increments('id');
             $table->string('c_name');
             $table->integer('c_telephone');
             $table->string('c_address');
