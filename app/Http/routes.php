@@ -31,6 +31,7 @@ Route::group(['middleware'=>['web']], function()
         Route::get('/ontransactions', 'ClientController@ontransactions');
         Route::get('/pasttransactions', 'ClientController@pasttransactions');
         Route::post('company-info-save','CompanyInfoController@storeCompanyInfo');
+        Route::post('/payment', 'EditPaymentMethod@update');
     });
 
     Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()

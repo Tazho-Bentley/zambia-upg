@@ -26,5 +26,12 @@ class UsersSeeder extends Seeder
         $user->password=bcrypt('kuma1993');
         $user->role= 1;
         $user->save();
+
+        $user = new User();
+        $user->name="Tazho Bentley";
+        $user->email="tazho@upg.com";
+        $user->password=bcrypt('Tazho1');
+        $user->role= 1;
+        $user->save();
     }
 }
