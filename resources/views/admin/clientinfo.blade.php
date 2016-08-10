@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="container">
         <div class="col-md-3">
             @include('includes.administrator')
@@ -13,84 +14,40 @@
                         <tr>
                             <th style="width: 1%"></th>
                             <th style="width: 20%">Company</th>
-                            <th>Client</th>
+                            <th>Address</th>
+                            <th>Phone Number</th>
+                            <th>Name</th>
                             <th>Status</th>
-                            <th style="width: 20%">#Edit</th>
+                            <th style="width: 20%">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
+                        @foreach($infor as $info)
                             <tr>
                                 <td>1</td>
                                 <td>
-                                    <a>Double Helix Ltd.</a>
+                                    <a>{{ $info->c_name}}</a>
                                     <br />
-                                    <small>Created 07.03.2016</small>
                                 </td>
-                                <td>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <img src="img/user.png" class="avatar" alt="Avatar">
-                                        </li>
-                                    </ul>
-                                </td>
+                                <td>{{ $info->c_address}}</td>
+                                <td>{{ $info->c_telephone}}</td>
+                                <td>{{ $client_name}}</td>
                                 <td>
                                     <button type="button" class="btn btn-error btn-xs">Suspended</button>
                                 </td>
                                 <td>
                                     <div class="row">
+
                                         <div class="col-sm-6">
-                                            <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                            <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View</a>
                                         </div>
                                         <div class="col-sm-6">
-                                            <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Suspend </a>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                            <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Suspend</a>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>#</td>
-                                <td>
-                                    <a>NAM-CODE Security & Travel Agency</a>
-                                    <br />
-                                    <small>Created 01.01.2015</small>
-                                </td>
-                                <td>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <img src="img/user7.png" class="avatar" alt="Avatar">
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-success btn-xs">Active</button>
-                                </td>
-                                <td>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Suspend </a>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
+                        @endforeach
                         </tbody>
 
                     </table>

@@ -56,7 +56,7 @@
 
                             <div class="panel-body">
                                 <div class="table-responsive">
-                                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <table id="datatable" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                         <thead>
                                         <tr>
                                             <th>Transaction ID</th>

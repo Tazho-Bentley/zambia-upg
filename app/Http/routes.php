@@ -14,7 +14,8 @@
 Route::get('/', function () {
     return view('landing');
 });
-
+Route::resource('merchant', 'MerchantController');
+Route::resource('merchant.method', 'PaymentMethodController');
 Route::auth();
 
 Route::group(['middleware'=>['web']], function()
@@ -37,6 +38,7 @@ Route::group(['middleware'=>['web']], function()
     Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
     {
         Route::get('/clientarea', 'adminController@client');
+        Route::get('/vendor-area', 'adminController@dashboard');
         Route::get('/completedtrans', 'adminController@completed');
         Route::get('/ongoingtrans', 'adminController@ongoing');
         Route::get('/dashboard', 'adminController@dashboard');

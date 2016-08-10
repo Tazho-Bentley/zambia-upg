@@ -58,7 +58,7 @@
                         <div><hr/>
                             <div class="row panel">
                                 <div class="panel-body col-lg-12">
-                                    <button type="button" class="btn btn-default btn-primary btn-sm" data-toggle="modal" data-target="#paymentinfo">Add/Remove</button>
+                                    <button onclick="handleCheckBox()" type="button" class="btn btn-default btn-primary btn-sm" data-toggle="modal" data-target="#paymentinfo">Add/Remove</button>
                                 </div>
                             </div>
                         </div><hr/>
@@ -82,7 +82,6 @@
     </div>
 
     <!-- My Modals for this page!-->
-    <!-- This is what happens when you dont read comments. chita and shemiah 2016 -->
     <div class="modal fade" id="paymentinfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -142,6 +141,10 @@
             </div>
         </div>
     </div>
+
+    <script src="js/main.js">
+
+    </script>
 
 
 @endsection
