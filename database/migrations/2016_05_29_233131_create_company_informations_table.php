@@ -14,9 +14,9 @@ class CreateCompanyInformationsTable extends Migration
     {
         Schema::create('company_informations', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('c_name');
+            $table->string('c_name', 20);
             $table->integer('c_telephone');
-            $table->string('c_address');
+            $table->string('c_address', 50);
             $table->boolean('mtn');
             $table->boolean('cardservices');
             $table->boolean('airtel');

@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('landing');
 });
 Route::resource('merchant', 'MerchantController');
-Route::resource('merchant.method', 'PaymentMethodController');
+Route::resource('merchant.method.client.amount', 'PaymentMethodController');
 Route::auth();
 
 Route::group(['middleware'=>['web']], function()
