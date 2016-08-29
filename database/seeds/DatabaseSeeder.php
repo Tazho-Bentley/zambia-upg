@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UsersSeeder::class);
         $this->call(CompanyInformationSeeder::class);
         $this->call(MTNMoneytUsersTableSeeder::class);
+        $this->call(AirtelMoneyUsersTableSeeder::class);
 
     }
 }

@@ -17,8 +17,9 @@ class CreateTransactionsTable extends Migration
             $table->string('item', 20);
             $table->float('amount');
             $table->dateTime('date');
-            $table->integer('merchantID')->unsigned()->unique();
-            $table->foreign('merchantID')->references('id')->on('users');
+            $table->string('payment_type', 15);
+            $table->integer('merchantID')->unsigned();
+            $table->foreign('merchantID')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

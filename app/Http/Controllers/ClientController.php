@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Transaction;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\CompanyInformation;
@@ -102,13 +103,10 @@ class ClientController extends Controller
         
     }
 
-    public function ontransactions()
-    {
-        return view('client.ontransactions');
-    }
-
     public function pasttransactions()
     {
-        return view('client.pasttransactions');
+        $id = \Illuminate\Support\Facades\Auth::User()->id;
+        $transactions = Transaction::all();
+        return view('client.pasttransactions', compact('transactions'));
     }
 }

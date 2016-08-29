@@ -23,7 +23,7 @@ class CreateCompanyInformationsTable extends Migration
             $table->boolean('zoona');
             $table->boolean('xapit');
             $table->integer('userID')->unsigned()->unique();
-            $table->foreign('userID')->references('id')->on('users');
+            $table->foreign('userID')->references('id')->on('users')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
         });

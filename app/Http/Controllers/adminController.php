@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Transaction;
 use App\CompanyInformation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -37,7 +37,8 @@ class adminController extends Controller
     }
     public function completed()
     {
-        return view('admin.completedtrans');
+        $transactions = Transaction::all();
+        return view('admin.completedtrans', compact('transactions'));
     }
     public function account()
     {

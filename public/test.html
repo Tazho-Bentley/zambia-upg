@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>UPG</title>
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" >
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+
+    <link href="{!! asset('css/bootstrap.min.css') !!}" rel="stylesheet">
+    <link href="{!! asset('css/dataTables.bootstrap.min.css') !!}" rel="stylesheet" type="text/css" >
+    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+
+    <script src="js/jquery.min.js"></script>
+</head>
+<body id="app-layout">
+<div class="container">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-bordered" id="table_id">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Item Name</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Merchant id</th>
+                            <th>Payment Type</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Id</td>
+                                <td>Item Name</td>
+                                <td>Amount</td>
+                                <td>Date</td>
+                                <td>Merchant id</td>
+                                <td>Payment Type</td>
+                            </tr>
+                            <tr>
+                                <td>Id</td>
+                                <td>Item Name</td>
+                                <td>Amount</td>
+                                <td>Date</td>
+                                <td>Merchant id</td>
+                                <td>Payment Type</td>
+                            </tr>
+                            <tr>
+                                <td>Id</td>
+                                <td>Item Name</td>
+                                <td>Amount</td>
+                                <td>Date</td>
+                                <td>Merchant id</td>
+                                <td>Payment Type</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DataTables -->
+    <script src="//code.jquery.com/jquery-1.12.3.js"></script>
+    <script src='js/jquery.dataTables.min.js'></script>
+
+    <!-- Bootstrap JS form CDN -->
+    <script src="js/bootstrap.min.js"></script>
+
+    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+    <script>
+        $(document).ready( function () {
+            $('#table_id').DataTable();
+        } );
+    </script>
+</body>
+</html>

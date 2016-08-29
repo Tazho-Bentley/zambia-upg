@@ -17,6 +17,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet" >
     <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
 
     <!-- Font Awesome -->
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -31,6 +32,7 @@
     <link href="{!! asset('css/bootstrap.min.css') !!}" rel="stylesheet">
     <link href="{!! asset('css/dataTables.bootstrap.min.css') !!}" rel="stylesheet" type="text/css" >
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+
 
     <script src="{!! asset('js/jquery.min.js') !!}"></script>
 </head>
@@ -177,8 +179,13 @@
         </div>
     </div> <!-- End footer bottom area -->
 
-    <!-- Latest jQuery form server -->
-    <script src="js/jquery.min.js"></script>
+    <!-- DataTables -->
+    <script src="//code.jquery.com/jquery-1.12.3.js"></script>
+    <script src="{!! asset('js/jquery.dataTables.min.js')!!}"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- App scripts -->
+    @stack('scripts')
 
     <!-- Bootstrap JS form CDN -->
     <script src="js/bootstrap.min.js"></script>
@@ -186,26 +193,27 @@
     <!-- jQuery sticky menu -->
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
-    <script src="js/jquery-1.10.2.js"></script>
 
-    <!-- jQuery easing -->
+
     <script src="js/jquery.easing.1.3.min.js"></script>
+
     <script src="js/jquery.metisMenu.js"></script>
     <script src="js/morris/raphael-2.1.0.min.js"></script>
-    <script src="js/morris/morris.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="js/morris/morris.js"></script><!-- jQuery easing
+    <script src="js/custom.js"></script>JavaScripts -->
+        <script src="js/main.js">
 
-    <!-- Main Script -->
-    <script src="js/main.js">
+        </script>
 
-    </script>
-    <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous">
 
-    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
 
     </script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+    <script>
+        $(document).ready( function () {
+            $('#table_id').DataTable();
+        } );
+    </script>
 </body>
 </html>
