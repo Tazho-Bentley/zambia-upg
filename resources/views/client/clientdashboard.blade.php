@@ -14,23 +14,15 @@
         <div class="sidebar-collapse">
             <ul class="nav" id="main-menu">
                 <li class="text-center">
-
                 </li>
-
-
                 <li>
-                    <a class="active-menu"  href="home"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                    <a class="active-menu"  href="vendor-area"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                 </li>
                 <li>
                     <a  href="paymethods"><i class="fa fa-desktop fa-3x"></i> Merchant Information </a>
                 </li>
-
-                <li  >
-                    <a  href="ontransactions"><i class="fa fa-table fa-3x"></i> Ongoing Transactions</a>
-                </li>
-
-                <li  >
-                    <a  href="pasttransactions"><i class="fa fa-table fa-3x"></i> Prevoius Transactions</a>
+                <li >
+                    <a  href="pasttransactions"><i class="fa fa-table fa-3x"></i>Transactions</a>
                 </li>
                 <li  >
                     <a  href="account"><i class="fa fa-edit fa-3x"></i> My Account </a>
@@ -48,57 +40,6 @@
 
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="panel panel-back noti-box">
-                <span class="icon-box bg-color-red set-icon">
-                    <i class="fa fa-envelope-o"></i>
-                </span>
-                        <div class="text-box" >
-                            <p class="main-text">Messages</p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="panel panel-back noti-box">
-                <span class="icon-box bg-color-blue set-icon">
-                    <i class="fa fa-bell-o"></i>
-                </span>
-                        <div class="text-box" >
-                            <p class="main-text">Notifications</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="panel panel-back noti-box">
-                <span class="icon-box bg-color-brown set-icon">
-                    <i class="fa fa-rocket"></i>
-                </span>
-                        <div class="text-box" >
-                            <p class="main-text">Ongoing Transactions</p>
-
-                        </div>
-                    </div>
-            </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="panel panel-back noti-box">
-                <span class="icon-box bg-color-brown set-icon">
-                    <i class="fa fa-rocket"></i>
-                </span>
-                        <div class="text-box" >
-                            <p class="main-text">Previous Transactions</p>
-
-                        </div>
-                    </div>
-                </div><hr/><hr/>
-            <!-- /. ROW  -->
-
-
             <!-- /. ROW  -->
             <div class="row">
                 <div class="col-md-9 col-sm-12 col-xs-12">

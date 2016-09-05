@@ -16,7 +16,7 @@
                     <li class="text-center">
                     </li>
                     <li>
-                        <a class="active-menu"  href="home"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                        <a class="active-menu"  href="vendor-area"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>
                     <li>
                         <a  href="paymethods"><i class="fa fa-desktop fa-3x"></i> My Information</a>

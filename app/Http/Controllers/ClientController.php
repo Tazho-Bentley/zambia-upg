@@ -30,17 +30,25 @@ class ClientController extends Controller
     {
         $id = \Illuminate\Support\Facades\Auth::User()->id;
         $temp = [];
-        $company_info = CompanyInformation::get()->where('userID',$id)[0];
-        $c_name = $company_info->c_name;
-        $c_address = $company_info->c_address;
-        $c_telephone = $company_info->c_telephone;
-        $mtn = $company_info->mtn;
-        $airtel = $company_info->airtel;
-        $zoona = $company_info->zoona;
-        $cardservices = $company_info->cardservices;
-        $xapit = $company_info->xapit;
+        //$company_info = CompanyInformation::get()->where('userID',$id);
+        //$c_name = $company_info->get('c_name');
+        $c_name = DB::table('company_informations')->where('userID', $id)->value('c_name');
+       // $c_address = $company_info->get('c_address');
+        $c_address = DB::table('company_informations')->where('userID', $id)->value('c_address');
+        //$c_telephone = $company_info->get('c_telephone');
+        $c_telephone = DB::table('company_informations')->where('userID', $id)->value('c_telephone');
+        //$mtn = $company_info->get('mtn');
+        $mtn = DB::table('company_informations')->where('userID', $id)->value('mtn');
+        //$airtel = $company_info->get('airtel');
+        $airtel = DB::table('company_informations')->where('userID', $id)->value('airtel');
+        //$zoona = $company_info->get('zoona');
+        $zoona = DB::table('company_informations')->where('userID', $id)->value('zoona');
+        //$cardservices = $company_info->get('cardservices');
+        $cardservices = DB::table('company_informations')->where('userID', $id)->value('cardservices');
+        //$xapit = $company_info->get('xapit');
+        $xapit = DB::table('company_informations')->where('userID', $id)->value('xapit');
         $temp = array('mtn'=>$mtn,'airtel'=>$airtel,'cardservices'=>$cardservices,'xapit'=>$xapit,'zoona'=>$zoona);
-        
+
         $payment_opt = [];
         $payment_opt_all = [];
         foreach($temp as $payment_method=>$value)
@@ -100,13 +108,13 @@ class ClientController extends Controller
         $email = DB::table('users')->where('id', $id)->value('email');
 
         return view('client.paymethods',compact('c_telephone','c_address','c_name','email','payment_opt','payment_opt_all'));
-        
     }
 
     public function pasttransactions()
     {
         $id = \Illuminate\Support\Facades\Auth::User()->id;
         $transactions = Transaction::all();
+        $transactions = DB::table('transactions')->where('merchantID', '=', $id)->get();
         return view('client.pasttransactions', compact('transactions'));
     }
 }

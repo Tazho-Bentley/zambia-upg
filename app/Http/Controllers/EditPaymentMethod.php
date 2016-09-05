@@ -35,6 +35,6 @@ class EditPaymentMethod extends Controller
             'zoona'=>$data['zoona'],
             'xapit'=>$data['xapit']
         ]);*/
-        return redirect()->back();
+        return redirect()->back()->with('success','Payment Methods Updated');
     }
 }

@@ -82,7 +82,7 @@
     </div>
 
     <!-- My Modals for this page!-->
-    <div class="modal fade" id="paymentinfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal" id="paymentinfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -108,7 +108,7 @@
         </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="companyinfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal" id="companyinfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
