@@ -113,7 +113,6 @@ class ClientController extends Controller
     public function pasttransactions()
     {
         $id = \Illuminate\Support\Facades\Auth::User()->id;
-        $transactions = Transaction::all();
         $transactions = DB::table('transactions')->where('merchantID', '=', $id)->get();
         return view('client.pasttransactions', compact('transactions'));
     }
