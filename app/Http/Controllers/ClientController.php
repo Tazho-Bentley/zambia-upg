@@ -18,7 +18,22 @@ class ClientController extends Controller
     //All client functions will be done here
     public function dashboard()
     {
-        return view('client.clientdashboard');
+        $id = \Illuminate\Support\Facades\Auth::User()->id;
+        $transactions = DB::table('transactions')->where('merchantID', '=', $id)->count();
+        $total = DB::table('transactions')->where('merchantID', '=', $id)->sum('amount');
+        $mtn_count = DB::table('transactions')->where(
+            [
+                ['merchantID', '=', $id],
+                ['payment_type', '=', 'MTN'],
+            ]
+        )->count();
+        $airtel_count = DB::table('transactions')->where(
+            [
+                ['merchantID', '=', $id],
+                ['payment_type', '=', 'Airtel'],
+            ]
+        )->count();
+        return view('client.clientdashboard', compact('transactions', 'total','mtn_count','airtel_count'));
     }
 
     public function account()
