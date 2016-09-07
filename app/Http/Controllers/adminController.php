@@ -18,7 +18,25 @@ class adminController extends Controller
 
     public function dashboard()
     {
-        return view('admin.admindashboard');
+        $id = \Illuminate\Support\Facades\Auth::User()->id;
+        $transactions = DB::table('transactions')->count();
+        $user_count = DB::table('company_informations')->count();
+        $total = DB::table('transactions')->sum('amount');
+        $mtn_count = DB::table('transactions')->where(
+            [
+                ['payment_type', '=', 'MTN'],
+            ]
+        )->count();
+        $airtel_count = DB::table('transactions')->where(
+            [
+                ['payment_type', '=', 'Airtel'],
+            ]
+        )->count();
+        return view('admin.admindashboard',
+            compact(
+                'transactions', 'total','mtn_count','airtel_count','user_count'
+            )
+        );
     }
     public function client()
     {
