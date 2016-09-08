@@ -20,7 +20,8 @@ class adminController extends Controller
     {
         $id = \Illuminate\Support\Facades\Auth::User()->id;
         $transactions = DB::table('transactions')->count();
-        $user_count = DB::table('company_informations')->count();
+        $user_count = DB::table('users')->count();
+        $merchant_count = DB::table('company_informations')->count();
         $total = DB::table('transactions')->sum('amount');
         $mtn_count = DB::table('transactions')->where(
             [
@@ -34,20 +35,15 @@ class adminController extends Controller
         )->count();
         return view('admin.admindashboard',
             compact(
-                'transactions', 'total','mtn_count','airtel_count','user_count'
+                'transactions', 'total','mtn_count','airtel_count','user_count','merchant_count'
             )
         );
     }
     public function client()
     {
-       $clientinfo = DB::table('company_informations')->get();
-        foreach ($clientinfo as $info) {
-            $c_user = $info->userID;
-        }
-        $client_name = DB::table('users')->where('id', $c_user)->value('name');
-        $infor = CompanyInformation::all();
+        $info = CompanyInformation::all();
 
-        return view('admin.clientinfo',compact('infor','client_name'));
+        return view('admin.clientinfo', compact('info'));
     }
     public function ongoing()
     {
@@ -61,5 +57,11 @@ class adminController extends Controller
     public function account()
     {
         return view('admin.adminaccount');
+    }
+    public function client_profile($id)
+    {
+        $company = CompanyInformation::findOrFail($id);
+
+        return view('admin.clientprofile',compact('company'));
     }
 }

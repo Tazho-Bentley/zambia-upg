@@ -14,8 +14,11 @@
 Route::get('/', function () {
     return view('landing');
 });
-Route::resource('merchant', 'MerchantController');
-Route::resource('merchant.method.client.amount', 'PaymentMethodController');
+Route::group(['middleware' => 'App\Http\Middleware\Cors'], function(){
+    Route::resource('merchant', 'MerchantController');
+    Route::resource('merchant.method.client.amount', 'PaymentMethodController');
+});
+
 Route::auth();
 
 Route::group(['middleware'=>['web']], function()
@@ -41,6 +44,7 @@ Route::group(['middleware'=>['web']], function()
         Route::get('/completedtrans', 'adminController@completed');
         Route::get('/dashboard', 'adminController@dashboard');
         Route::get('/adminaccount', 'adminController@account');
+        Route::get('/client-profile', 'adminController@client_profile');
 
     });
 });

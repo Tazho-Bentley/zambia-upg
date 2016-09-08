@@ -24,11 +24,11 @@
                                 type: "bar",
 
                                 dataPoints: [
-                                    { x: 10, y: {{$airtel_count}}, label:"Airtel" },
-                                    { x: 20, y: {{$mtn_count}}, label:"MTN" },
+                                    { x: 10, y: 0, label:"Card Services" },
+                                    { x: 20, y: 0, label:"Zoona" },
                                     { x: 30, y: 0, label:"Xapit" },
-                                    { x: 40, y: 0, label:"Card Services" },
-                                    { x: 50, y: 0, label:"Zoona" }
+                                    { x: 40, y: {{$airtel_count}}, label:"Airtel" },
+                                    { x: 50, y: {{$mtn_count}}, label:"MTN" }
                                 ]
                             }
                         ]
@@ -74,18 +74,18 @@
                                 <div class="panel-body row">
                                     <div class="col-lg-6">
                                         <div class="panel-heading">
-                                            Total Users
+                                            Registered Merchants
                                         </div>
                                         <div class="col-lg-12">
-                                            <span class="counter">{{$user_count}}</span>
+                                            <span class="counter">{{$merchant_count}}</span>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="panel-heading">
-                                            Active Users
+                                            Registered Users
                                         </div>
                                         <div class="col-lg-12">
-                                            <span>ZMK </span><span class="counter">{{$total}}</span>
+                                            <span class="counter">{{$user_count}}</span>
                                         </div>
                                     </div>
                                 </div>
