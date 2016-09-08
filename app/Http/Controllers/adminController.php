@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Transaction;
 use App\CompanyInformation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -18,7 +18,25 @@ class adminController extends Controller
 
     public function dashboard()
     {
-        return view('admin.admindashboard');
+        $id = \Illuminate\Support\Facades\Auth::User()->id;
+        $transactions = DB::table('transactions')->count();
+        $user_count = DB::table('company_informations')->count();
+        $total = DB::table('transactions')->sum('amount');
+        $mtn_count = DB::table('transactions')->where(
+            [
+                ['payment_type', '=', 'MTN'],
+            ]
+        )->count();
+        $airtel_count = DB::table('transactions')->where(
+            [
+                ['payment_type', '=', 'Airtel'],
+            ]
+        )->count();
+        return view('admin.admindashboard',
+            compact(
+                'transactions', 'total','mtn_count','airtel_count','user_count'
+            )
+        );
     }
     public function client()
     {
@@ -37,7 +55,8 @@ class adminController extends Controller
     }
     public function completed()
     {
-        return view('admin.completedtrans');
+        $transactions = Transaction::all();
+        return view('admin.completedtrans', compact('transactions'));
     }
     public function account()
     {

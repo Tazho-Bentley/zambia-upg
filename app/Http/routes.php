@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('landing');
 });
 Route::resource('merchant', 'MerchantController');
-Route::resource('merchant.method', 'PaymentMethodController');
+Route::resource('merchant.method.client.amount', 'PaymentMethodController');
 Route::auth();
 
 Route::group(['middleware'=>['web']], function()
@@ -29,7 +29,6 @@ Route::group(['middleware'=>['web']], function()
         Route::get('/account', 'ClientController@account');
         Route::get('/vendor-area', 'ClientController@dashboard');
         Route::get('/paymethods', 'ClientController@paymethods');
-        Route::get('/ontransactions', 'ClientController@ontransactions');
         Route::get('/pasttransactions', 'ClientController@pasttransactions');
         Route::post('company-info-save','CompanyInfoController@storeCompanyInfo');
         Route::post('/payment', 'EditPaymentMethod@update');
@@ -38,9 +37,8 @@ Route::group(['middleware'=>['web']], function()
     Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
     {
         Route::get('/clientarea', 'adminController@client');
-        Route::get('/vendor-area', 'adminController@dashboard');
+        Route::get('/admin-area', 'adminController@dashboard');
         Route::get('/completedtrans', 'adminController@completed');
-        Route::get('/ongoingtrans', 'adminController@ongoing');
         Route::get('/dashboard', 'adminController@dashboard');
         Route::get('/adminaccount', 'adminController@account');
 

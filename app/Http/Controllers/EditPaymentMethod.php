@@ -26,6 +26,15 @@ class EditPaymentMethod extends Controller
         $companyID = DB::table('company_informations')->where('userID', $id)->value('id');
         $company_info = CompanyInformation::findorfail($companyID);
         $request = array_except($request, ['_token']);
+        DB::table('company_informations')
+            ->where('id', $companyID)
+            ->update([
+                'mtn'=> 0,
+                'airtel'=>0,
+                'cardservices'=>0,
+                'zoona'=>0,
+                'xapit'=> 0,
+            ]);
         $company_info->where('id', $companyID)->update($request->all());
         //$company_info->where('id', $companyID)->update($request->except(['_token']));
         /*([
@@ -35,6 +44,6 @@ class EditPaymentMethod extends Controller
             'zoona'=>$data['zoona'],
             'xapit'=>$data['xapit']
         ]);*/
-        return redirect()->back();
+        return redirect()->back()->with('success','Payment Methods Updated');;
     }
 }

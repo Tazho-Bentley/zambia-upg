@@ -38,7 +38,7 @@ class CompanyInfoController extends Controller
 
             if($res)
                 $request->session()->flash('flash_message', 'Company Information Added!');
-            return redirect()->back();
+            return redirect()->back()->with('success','Company Information Updated');
         }
         else{
             $res = DB::table('company_informations')->where('userId', $id)
@@ -48,7 +48,7 @@ class CompanyInfoController extends Controller
                     );
             if($res)
                 $request->session()->flash('flash_message', 'Company Information Updated!');
-            return redirect()->back();
+            return redirect()->back()->with('success','Company Information Updated!');
         }
     }
 }
