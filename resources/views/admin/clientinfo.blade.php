@@ -9,47 +9,29 @@
         <div class="col-md-9">
             <div>
                 <div id="page-inner">
-                    <table class="table table-striped projects">
+                    <table class="table table-bordered" id="table_id">
                         <thead>
                         <tr>
-                            <th style="width: 1%"></th>
-                            <th style="width: 20%">Company</th>
-                            <th>Address</th>
+                            <th>Id</th>
+                            <th>Company</th>
+                            <th>Physical Address</th>
                             <th>Phone Number</th>
-                            <th>Name</th>
-                            <th>Status</th>
-                            <th style="width: 20%">Actions</th>
+                            <th>User Identification</th>
+                            <th>View</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($infor as $info)
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    <a>{{ $info->c_name}}</a>
-                                    <br />
-                                </td>
-                                <td>{{ $info->c_address}}</td>
-                                <td>{{ $info->c_telephone}}</td>
-                                <td>{{ $client_name}}</td>
-                                <td>
-                                    <button type="button" class="btn btn-error btn-xs">Suspended</button>
-                                </td>
-                                <td>
-                                    <div class="row">
-
-                                        <div class="col-sm-6">
-                                            <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View</a>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Suspend</a>
-                                        </div>
-                                    </div>
-                                </td>
+                        @foreach($info as $data)
+                            <tr class="gradeA">
+                                <td>{{ $data->id }}</td>
+                                <td>{{ $data->c_name }}</td>
+                                <td>{{ $data->c_address }}</td>
+                                <td>{{ $data->c_telephone }}</td>
+                                <td>{{ $data->userID }}</td>
+                                <td><a href="{{'client-profile',$data->id}}" class="btn btn-info">View</a></td>
                             </tr>
                         @endforeach
                         </tbody>
-
                     </table>
                     <div class="title_right">
                         <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search"></div>

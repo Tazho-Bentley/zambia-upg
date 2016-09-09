@@ -9,8 +9,11 @@
             <li>
                 <a  href="clientarea"><i class="fa fa-desktop fa-3x"></i>Client Area</a>
             </li>
+            <li>
+                <a  href="clientarea"><i class="fa fa-desktop fa-3x"></i>User Administration</a>
+            </li>
             <li  >
-                <a  href="completedtrans"><i class="fa fa-table fa-3x"></i>Transactions</a>
+                <a  href="completedtrans"><i class="fa fa-table fa-3x"></i>Transaction Monitoring</a>
             </li>
             <li  >
                 <a  href="adminaccount"><i class="fa fa-edit fa-3x"></i>My Account</a>

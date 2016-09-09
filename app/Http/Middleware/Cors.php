@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+<<<<<<< HEAD
 use Illuminate\Contracts\Routing\Middleware;
 use Illuminate\Http\Response;
 
@@ -26,3 +27,14 @@ class Cors implements Middleware
             ->header('Access-Control-Max-Age', '28800');
     }
 }
+=======
+
+class Cors {
+    public function handle($request, Closure $next)
+    {
+        return $next($request)
+            ->header('Access-Control-Allow-Origin', '*')
+            ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    }
+}
+>>>>>>> 91c16cd032f5cff1a02fe64dc708e466077ddc63
