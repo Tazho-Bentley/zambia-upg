@@ -43,5 +43,10 @@ Route::group(['middleware'=>['web']], function()
         Route::get('/adminaccount', 'adminController@account');
 
     });
+
+    Route::get('breweries', ['middleware' => 'Cors', function()
+    {
+        return \Response::json(\App\Brewery::with('beers', 'geocode')->paginate(10), 200);
+    }]);
 });
 

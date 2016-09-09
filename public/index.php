@@ -19,6 +19,13 @@
 |
 */
 
+    header('Access-Control-Allow-Origin','*');
+    header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    header('Access-Control-Allow-Headers', 'Content-Type, Accept, Authorization, X-Requested-With');
+    header('Content-Type: application/json;charset=UTF-8');
+    header('Access-Control-Allow-Credentials', 'true');
+    header('Access-Control-Max-Age', '28800');
+
 require __DIR__.'/../bootstrap/autoload.php';
 
 /*
