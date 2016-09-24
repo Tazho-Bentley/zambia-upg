@@ -5,10 +5,9 @@
 | Application Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
+| Here is where all Application Routes have been registered including the
+| Rest Resources
+
 */
 
 Route::get('/', function () {
@@ -43,6 +42,7 @@ Route::group(['middleware'=>['web']], function()
         Route::get('/admin-area', 'adminController@dashboard');
         Route::get('/completedtrans', 'adminController@completed');
         Route::get('/dashboard', 'adminController@dashboard');
+        Route::get('/management', 'adminController@userManagement');
         Route::get('/adminaccount', 'adminController@account');
         Route::get('/client-profile', 'adminController@client_profile');
 

@@ -13,15 +13,14 @@ class EditPaymentMethod extends Controller
 {
     //
     /**
-     * Create a new payment method instance.
+     * Create a new payment method update instance.
      *
      * @param  Request  $request
      * @return Response
      */
     public function update(Request $request)
     {
-        // Validate the request...
-        $data = $request->all();
+        //Update Payment Methods
         $id = \Illuminate\Support\Facades\Auth::User()->id;
         $companyID = DB::table('company_informations')->where('userID', $id)->value('id');
         $company_info = CompanyInformation::findorfail($companyID);
@@ -36,14 +35,6 @@ class EditPaymentMethod extends Controller
                 'xapit'=> 0,
             ]);
         $company_info->where('id', $companyID)->update($request->all());
-        //$company_info->where('id', $companyID)->update($request->except(['_token']));
-        /*([
-            'mtn'=> $data['mtn'],
-            'airtel'=>$data['airtel'],
-            'cardservices'=>$data['cardservices'],
-            'zoona'=>$data['zoona'],
-            'xapit'=>$data['xapit']
-        ]);*/
         return redirect()->back()->with('success','Payment Methods Updated');;
     }
 }

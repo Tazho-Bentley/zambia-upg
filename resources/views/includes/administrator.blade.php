@@ -10,7 +10,7 @@
                 <a  href="clientarea"><i class="fa fa-desktop fa-3x"></i>Client Area</a>
             </li>
             <li>
-                <a  href="clientarea"><i class="fa fa-desktop fa-3x"></i>User Administration</a>
+                <a  href="management"><i class="fa fa-desktop fa-3x"></i>User Administration</a>
             </li>
             <li  >
                 <a  href="completedtrans"><i class="fa fa-table fa-3x"></i>Transaction Monitoring</a>

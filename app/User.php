@@ -23,8 +23,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-    /*
-    **
+
+    /**
     * Return if user is superuser privileges
     */
 

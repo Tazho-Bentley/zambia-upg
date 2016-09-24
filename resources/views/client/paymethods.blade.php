@@ -24,10 +24,10 @@
                         </div><hr/>
                         <div class="row panel">
                             <div class="col-lg-12 panel-body">
-                                <h4><span class="label label-success">Company Name:</span> {{$c_name}}</h4>
-                                <h4><span class="label label-success">Company Email:</span> {{$email}}</h4>
-                                <h4><span class="label label-success">Company Telephone:</span> {{$c_telephone}}</h4>
-                                <h4><span class="label label-success">Company Address:</span> {{$c_address}}</h4>
+                                <h4><span class="label label-default">Company Name:</span> {{$c_name}}</h4>
+                                <h4><span class="label label-default">Company Email:</span> {{$email}}</h4>
+                                <h4><span class="label label-default">Company Telephone:</span>(+260) {{$c_telephone}}</h4>
+                                <h4><span class="label label-default">Company Address:</span> {{$c_address}}</h4>
                             </div>
                             <button type="button" class="btn btn-default btn-primary btn-sm" data-toggle="modal" data-target="#companyinfo">
                                 Edit

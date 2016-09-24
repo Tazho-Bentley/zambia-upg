@@ -13,25 +13,20 @@
                         <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Company</th>
-                            <th>Physical Address</th>
-                            <th>Phone Number</th>
-                            <th>User Identification</th>
-                            <th>View</th>
+                            <th>Name</th>
+                            <th>email</th>
+                            <th>Role</th>
+                            <th>Suspend/Activate</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($info as $data)
                             <tr class="gradeA">
                                 <td>{{ $data->id }}</td>
-                                <td>{{ $data->c_name }}</td>
-                                <td>{{ $data->c_address }}</td>
-                                <td>{{ $data->c_telephone }}</td>
-                                <td>{{ $data->userID }}</td>
-                                <td><a href="{{'client-profile',$data->id}}" class="btn btn-info">View</a></td>
-                                {{ Form::open(['method' => 'GET','route' => ['', $task->id],'style'=>'display:inline']) }}
-                                {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
-                                {{ Form::close() }}
+                                <td>{{ $data->email }}</td>
+                                <td>{{ $data->name }}</td>
+                                <td>{{ $data->role }}</td>
+                                <td><a href="{{'client-profile',$data->id}}" class="btn btn-info">Suspend/Activate</a></td>
                             </tr>
                         @endforeach
                         </tbody>
