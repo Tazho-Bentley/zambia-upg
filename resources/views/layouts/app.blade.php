@@ -94,8 +94,6 @@
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li><a href="{{ url('/') }}">UPG</a></li>
-                            <li><a href="{{ url('/features') }}">Features</a></li>
-                            <li><a href="{{ url('/pay-school') }}">Pay School</a></li>
                             <li><a href="{{ url('/about-upg') }}">About UPG</a></li>
                             <!-- Secure the Admin area -->
                             @if (Auth::guest())
