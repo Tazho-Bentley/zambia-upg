@@ -13,6 +13,9 @@
 Route::get('/', function () {
     return view('landing');
 });
+/**
+*Rest Resources
+ */
 Route::group(['middleware' => 'App\Http\Middleware\Cors'], function(){
     Route::resource('merchant', 'MerchantController');
     Route::resource('merchant.method.client.amount', 'PaymentMethodController');
@@ -22,12 +25,19 @@ Route::auth();
 
 Route::group(['middleware'=>['web']], function()
 {
+    /**
+     *Static Pages Routes
+     */
     Route::get('/home', 'HomeController@index');
     Route::get('/pay-school', 'PageController@pay');
     Route::get('/features', 'PageController@feature');
     Route::get('/about-upg', 'PageController@about');
 
-    Route::group(['middleware' => 'App\Http\Middleware\ClientMiddleware'], function(){
+    Route::group(['middleware' => 'App\Http\Middleware\ClientMiddleware'], function()
+    {
+        /**
+         *Client Pages Routes
+         */
         Route::get('/account', 'ClientController@account');
         Route::get('/vendor-area', 'ClientController@dashboard');
         Route::get('/paymethods', 'ClientController@paymethods');
@@ -38,6 +48,9 @@ Route::group(['middleware'=>['web']], function()
 
     Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
     {
+        /**
+         *Admin Pages Routes
+         */
         Route::get('/clientarea', 'adminController@client');
         Route::get('/admin-area', 'adminController@dashboard');
         Route::get('/completedtrans', 'adminController@completed');
@@ -48,6 +61,9 @@ Route::group(['middleware'=>['web']], function()
 
     });
 
+    /**
+     *Cross Origins Resources, Respond to external server requests
+     */
     Route::get('breweries', ['middleware' => 'Cors', function()
     {
         return \Response::json(\App\Brewery::with('beers', 'geocode')->paginate(10), 200);
