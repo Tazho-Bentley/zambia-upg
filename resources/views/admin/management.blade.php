@@ -26,7 +26,7 @@
                                 <td>{{ $data->email }}</td>
                                 <td>{{ $data->name }}</td>
                                 <td>{{ $data->role }}</td>
-                                <td><a href="{{'client-profile',$data->id}}" class="btn btn-info">Suspend/Activate</a></td>
+                                <td><a href="#" class="btn btn-info">Suspend/Activate</a></td>
                             </tr>
                         @endforeach
                         </tbody>

@@ -70,10 +70,10 @@ class adminController extends Controller
         //Account Details
         return view('admin.adminaccount');
     }
-    public function client_profile($id)
+    public function client_profile()
     {
         //View Client Profile
-        $company = CompanyInformation::findOrFail($id);
+       // $company = CompanyInformation::findOrFail($id);
 
         return view('admin.clientprofile',compact('company'));
     }

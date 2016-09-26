@@ -28,10 +28,7 @@
                                 <td>{{ $data->c_address }}</td>
                                 <td>{{ $data->c_telephone }}</td>
                                 <td>{{ $data->userID }}</td>
-                                <td><a href="{{'client-profile',$data->id}}" class="btn btn-info">View</a></td>
-                                {{ Form::open(['method' => 'GET','route' => ['', $task->id],'style'=>'display:inline']) }}
-                                {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
-                                {{ Form::close() }}
+                                <td><a href="#" class="btn btn-info">View</a></td>\
                             </tr>
                         @endforeach
                         </tbody>
