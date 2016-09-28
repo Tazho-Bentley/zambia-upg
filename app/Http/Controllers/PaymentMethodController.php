@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
+use DateTime;
 
 class PaymentMethodController extends Controller
 {
@@ -33,13 +34,20 @@ class PaymentMethodController extends Controller
                 ),200);
             }else{
                     $current_balance = DB::table('m_t_n_moneys')->where('phone',$clientID)->value('balance');
+                    if($amount==100){
+                        $itemName = "Family Plan 1";
+                    }elseif($amount==300){
+                        $itemName = "Family Plan 2";
+                    }elseif($amount==500){
+                        $itemName = "Family Plan 3";
+                    }
                     $newbalance = $current_balance - $amount;
                     if($newbalance > 0){
                         DB::table('m_t_n_moneys')
                             ->where('phone', $clientID)
                             ->update(['balance' => $newbalance]);
                         DB::table('transactions')->insert(
-                            ['item' => 'Item Name', 'amount' => $amount, 'date'=> Carbon::today(),
+                            ['item' => $itemName, 'amount' => $amount, 'date'=> Carbon::today(),
                                 'payment_type'=>$method,
                                 'merchantID'=> $id,
                             ]);
@@ -66,13 +74,20 @@ class PaymentMethodController extends Controller
                ),200);
            }else{
                $current_balance = DB::table('airtel_moneys')->where('phone',$clientID)->value('balance');
+               if($amount==100){
+                   $itemName = "Family Plan 1";
+               }elseif($amount==300){
+                   $itemName = "Family Plan 2";
+               }elseif($amount==500){
+                   $itemName = "Family Plan 3";
+               }
                $newbalance = $current_balance - $amount;
                if($newbalance > 0){
                    DB::table('airtel_moneys')
                        ->where('phone', $clientID)
                        ->update(['balance' => $newbalance]);
                    DB::table('transactions')->insert(
-                       ['item' => 'Item Name', 'amount' => $amount, 'date'=> Carbon::today(),
+                       ['item' => $itemName, 'amount' => $amount, 'date'=> Carbon::today(),
                            'payment_type'=>$method,
                            'merchantID'=> $id,
                        ]);
