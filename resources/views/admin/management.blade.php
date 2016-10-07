@@ -23,8 +23,8 @@
                         @foreach($info as $data)
                             <tr class="gradeA">
                                 <td>{{ $data->id }}</td>
-                                <td>{{ $data->email }}</td>
                                 <td>{{ $data->name }}</td>
+                                <td>{{ $data->email }}</td>
                                 <td>{{ $data->role }}</td>
                                 <td><a href="#" class="btn btn-info">Suspend/Activate</a></td>
                             </tr>

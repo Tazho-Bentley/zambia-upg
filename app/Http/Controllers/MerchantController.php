@@ -22,23 +22,28 @@ class MerchantController extends Controller
         $methods =  [];
         $mtn = DB::table('company_informations')->where('id', $id)->value('mtn');
         if($mtn == 1){
-            $methods["MTN"] = $mtn;
+            $selectedMtn ="MTN Money";
+            $methods["MTN"] = $selectedMtn;
         }
         $airtel = DB::table('company_informations')->where('id', $id)->value('airtel');
         if($airtel == 1){
-            $methods["Airtel"] = $airtel;
+            $selectedAirtel = "Airtel Money";
+            $methods["Airtel"] = $selectedAirtel;
         }
         $zoona = DB::table('company_informations')->where('id', $id)->value('zoona');
         if($zoona == 1){
-            $methods["Zoona"] = $zoona;
+            $selectedZoona = "Zoona";
+            $methods["Zoona"] = $selectedZoona;
         }
         $cardservice = DB::table('company_informations')->where('id', $id)->value('cardservices');
         if($cardservice == 1){
-            $methods["Card Service"] = $cardservice;
+            $selectedCard = "Visa";
+            $methods["Card Service"] = $selectedCard;
         }
         $xapit = DB::table('company_informations')->where('id', $id)->value('xapit');
         if($xapit == 1){
-            $methods["Xapit"] = $xapit;
+            $selectedXapit = "Xapit";
+            $methods["Xapit"] = $selectedXapit;
         }
         return response(array(
             'error' => false,

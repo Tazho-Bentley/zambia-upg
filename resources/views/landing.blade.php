@@ -31,8 +31,9 @@
                                         <div class="col-md-6 col-md-offset-6">
                                             <div class="slide-content">
                                                 <h2>We are UPG</h2>
-                                                <p style="color:#ffffff;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, dolorem, excepturi. Dolore aliquam quibusdam ut quae iure vero exercitationem ratione!</p>
-                                                <p style="color:#ffffff;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ab molestiae minus reiciendis! Pariatur ab rerum, sapiente ex nostrum laudantium.</p>
+                                                <p style="color:#ffffff;">Unified Payment Gateway is a next-generation payment and e-Commerce checkout system that is based in Lusaka,
+                                                    Zambia that enables merchants to receive money with no transaction markups or charges using one single account.</p>
+                                                <p style="color:#ffffff;"></p>
                                                 <a href="" class="readmore">Learn more</a>
                                             </div>
                                         </div>
@@ -52,7 +53,7 @@
                                         <div class="col-md-6 col-md-offset-6">
                                             <div class="slide-content">
                                                 <h2>Pay Online</h2>
-                                                <p style="color:#ffffff;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur, dolorum harum molestias tempora deserunt voluptas possimus quos eveniet, vitae voluptatem accusantium atque deleniti inventore. Enim quam placeat expedita! Quibusdam!</p>
+                                                <p style="color:#ffffff;">Our payment gateway system connects to payment system APIs and allows merchants access payment platforms using one account.</p>
                                                 <a href="" class="readmore">Learn more</a>
                                             </div>
                                         </div>
@@ -72,8 +73,8 @@
                                         <div class="col-md-6 col-md-offset-6">
                                             <div class="slide-content">
                                                 <h2>Its Not Magic</h2>
-                                                <p style="color:#ffffff;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, eius?</p>
-                                                <p style="color:#ffffff;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptates necessitatibus dicta recusandae quae amet nobis sapiente explicabo voluptatibus rerum nihil quas saepe, tempore error odio quam obcaecati suscipit sequi.</p>
+                                                <p style="color:#ffffff;">You are asking how??</p>
+                                                <p style="color:#ffffff;">UPG handles most of the work that the merchants are handling themselves and does the coordinating between business owners and the online payment providers.</p>
                                                 <a href="" class="readmore">Learn more</a>
                                             </div>
                                         </div>
@@ -124,14 +125,12 @@
             <div class="row">
                 <div class="col-sm-8">
                     <h2>Benefits of Online Payments</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nam tristique, diam in consequat iaculis, est purus iaculis mauris,
-                        imperdiet facilisis ante ligula at nulla. Quisque volutpat nulla risus,
-                        id maximus ex aliquet ut. Suspendisse potenti. Nulla varius lectus id turpi
-                        dignissim porta. Quisque magna arcu, blandit quis felis vehicula, feugiat gravida
-                        diam. Nullam nec turpis ligula. Aliquam quis blandit elit, ac sodales nisl. Aliquam
-                        eget dolor eget elit malesuada aliquet. In varius lorem lorem, semper bibendum lectus
-                        lobortis ac.</p>
+                    <p>Business owners will only make one connection with UPG and the system handles all the back end activities.
+
+                        Business owners can now receive money from their customers without them worrying which payment platform the customers are using.
+
+                        This gives a better room for expansion should another online payment provider join the industry as it will only need to be connected
+                        to the API. This will reduce the cost especially on the part of the business owners</p>
 
                     <p>Mauris placerat vitae lorem gravida viverra. Mauris in fringilla ex. Nulla facilisi.
                         Etiam scelerisque tincidunt quam facilisis lobortis. In malesuada pulvinar neque a
