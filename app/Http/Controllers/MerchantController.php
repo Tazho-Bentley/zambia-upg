@@ -1,11 +1,10 @@
 <?php
-
+/**
+*Class serves payment options requests from merchant website
+ */
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
-use App\CompanyInformation;
 use Illuminate\Support\Facades\DB;
 
 class MerchantController extends Controller

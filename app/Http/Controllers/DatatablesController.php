@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Code responsible for Datatables
+ * */
 namespace App\Http\Controllers;
 
 use App\Transaction;

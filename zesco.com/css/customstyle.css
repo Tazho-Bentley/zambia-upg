@@ -1,0 +1,39 @@
+
+        span.reference{
+            position:fixed;
+            left:5px;
+            top:5px;
+            font-size:10px;
+            text-shadow:1px 1px 1px #fff;
+        }
+        span.reference a{
+            color:#555;
+            text-decoration:none;
+			text-transform:uppercase;
+        }
+        span.reference a:hover{
+            color:#000;
+            
+        }
+        h1{
+            color:#ccc;
+            font-size:36px;
+            text-shadow:1px 1px 1px #fff;
+            padding:20px;
+        }
+        .checkbox {
+
+            display: inline-block;
+            position: relative;
+            padding-left: 5px;
+            min-height: 20px;
+            padding-left: 20px;
+            margin-bottom: 0;
+            font-weight: 400;
+            cursor: pointer;
+            width: 10px;
+
+
+
+}
+ 
